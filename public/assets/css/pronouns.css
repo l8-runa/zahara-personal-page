@@ -193,20 +193,18 @@
     }
 }
 
-/* External link card */
+/* External link card - override cards.css dark text rule */
 .pronouns-page .external-link-card {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border: none;
 }
 
-.pronouns-page .external-link-card .card-body {
-    color: white;
-}
-
-.pronouns-page .external-link-card p {
-    color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 1rem;
+.pronouns-page .external-link-card,
+.pronouns-page .external-link-card .card-body,
+.pronouns-page .external-link-card .card-body p,
+.pronouns-page .external-link-card .card-body * {
+    color: white !important;
 }
 
 .pronouns-page .external-link-card .btn-primary {

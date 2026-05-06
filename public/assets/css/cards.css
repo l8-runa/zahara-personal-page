@@ -228,13 +228,20 @@
     margin-bottom: 0;
 }
 
-/* Ensure card text is always dark, never white */
+/* Ensure card text is always dark, EXCEPT for cards with custom backgrounds */
 .card-body,
 .card-body p,
 .card-body div,
 .card-body ul,
 .card-body li {
     color: #212529 !important;
+}
+
+/* Override for cards with gradient/colored backgrounds */
+.card.bg-gradient,
+.card[class*="gradient"],
+.card[class*="-card"]:not(.special-skill-item):not(.legend-card):not(.name-card) {
+    color: inherit !important;
 }
 
 .card-body strong {
