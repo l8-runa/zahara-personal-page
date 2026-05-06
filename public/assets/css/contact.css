@@ -1,0 +1,240 @@
+/* Contact Form Styling */
+.contact-form-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: clamp(2rem, 6vw, 3rem);
+    border-radius: clamp(15px, 4vw, 20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    margin: 0 clamp(0.5rem, 2vw, 0);
+}
+
+.contact-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+.contact-form {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+    padding: clamp(1.5rem, 5vw, 2.5rem);
+    border-radius: clamp(12px, 3vw, 15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: clamp(0.375rem, 1vw, 0.5rem);
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-form .form-label i {
+    color: #667eea;
+    width: 16px;
+}
+
+.contact-form .form-control {
+    border: 2px solid #e9ecef;
+    border-radius: clamp(8px, 2vw, 10px);
+    padding: clamp(0.625rem, 2vw, 0.75rem) clamp(0.875rem, 3vw, 1rem);
+    font-size: clamp(14px, 2vw, 16px);
+    transition: all var(--transition-duration, 0.3s) var(--transition-easing, ease);
+    background: #fff;
+    min-height: 44px;
+}
+
+.contact-form .form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    transform: translateY(-2px);
+}
+
+.contact-form .form-control::placeholder {
+    color: #adb5bd;
+    font-style: italic;
+}
+
+.contact-form textarea.form-control {
+    resize: vertical;
+    min-height: clamp(100px, 25vw, 120px);
+}
+
+.contact-form .btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 50px;
+    padding: clamp(0.75rem, 2vw, 0.875rem) clamp(2rem, 5vw, 2.5rem);
+    font-weight: 600;
+    font-size: clamp(16px, 2.5vw, 18px);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all var(--transition-duration, 0.3s) var(--transition-easing, ease);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    min-height: 48px;
+    width: 100%;
+}
+
+.contact-form .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+.contact-form .btn:active {
+    transform: translateY(-1px);
+}
+
+/* Responsive adjustments - Mobile first handled by fluid typography above */
+@media (max-width: 479px) {
+    .contact-form-container {
+        margin: 0 0.5rem;
+    }
+}
+
+/* Validation styles */
+.form-control.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.form-control.is-valid {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.invalid-feedback {
+    display: block;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.valid-feedback {
+    display: block;
+    color: #28a745;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* US Phone Input Styling */
+.phone-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.phone-prefix {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #667eea;
+    font-weight: 600;
+    font-size: 1rem;
+    z-index: 2;
+    pointer-events: none;
+    background: #fff;
+    padding: 0 0.25rem;
+    min-width: 1.5rem;
+}
+
+.phone-input {
+    border: 2px solid #e9ecef;
+    border-radius: clamp(8px, 2vw, 10px);
+    padding: clamp(0.625rem, 2vw, 0.75rem) clamp(0.875rem, 3vw, 1rem) clamp(0.625rem, 2vw, 0.75rem) clamp(2.5rem, 6vw, 3rem);
+    height: clamp(44px, 10vw, 48px);
+    font-size: clamp(14px, 2vw, 16px);
+    line-height: 1.5;
+    width: 100%;
+    background: #fff;
+    transition: all var(--transition-duration, 0.3s) var(--transition-easing, ease);
+    text-align: right;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.5px;
+}
+
+.phone-input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    outline: none;
+}
+
+.phone-input.is-valid {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.phone-input.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Alert Message Styling */
+.alert-message {
+    position: relative;
+    z-index: 10;
+    padding: clamp(1rem, 3vw, 1.25rem) clamp(1.25rem, 3vw, 1.5rem) !important;
+    margin-bottom: clamp(1rem, 3vw, 1.5rem) !important;
+    margin-top: 0 !important;
+    border-radius: clamp(10px, 2.5vw, 12px) !important;
+    font-size: clamp(1rem, 2.5vw, 1.1rem) !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    border: 2px solid transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: clamp(0.5rem, 1.5vw, 0.75rem) !important;
+    animation: slideInDown 0.3s ease !important;
+    min-height: clamp(50px, 12vw, 60px) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.alert-message strong {
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+.alert-message.alert-success {
+    background-color: #d4edda !important;
+    color: #155724 !important;
+    border-color: #c3e6cb !important;
+}
+
+.alert-message.alert-danger {
+    background-color: #f8d7da !important;
+    color: #721c24 !important;
+    border-color: #f5c6cb !important;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Phone prefix responsive */
+.phone-prefix {
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    left: clamp(0.5rem, 1.5vw, 0.75rem);
+    min-width: clamp(1rem, 3vw, 1.5rem);
+}
+

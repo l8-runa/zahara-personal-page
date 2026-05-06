@@ -1,0 +1,125 @@
+/* About Page Specific Styles */
+
+/* Content spacing and typography */
+.portfolio-block.skills .col-lg-10,
+.portfolio-block.skills .col-xl-8 {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-block.skills .col-lg-10 > div,
+.portfolio-block.skills .col-xl-8 > div {
+    margin-bottom: 3.5rem;
+}
+
+.portfolio-block.skills .col-lg-10 > div:last-of-type,
+.portfolio-block.skills .col-xl-8 > div:last-of-type {
+    margin-bottom: 0;
+}
+
+.portfolio-block.skills h2 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    margin-top: 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.portfolio-block.skills p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.portfolio-block.skills p:last-child {
+    margin-bottom: 0;
+}
+
+.portfolio-block.skills ul.list-unstyled {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.portfolio-block.skills ul.list-unstyled li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.portfolio-block.skills ul.list-unstyled li strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Button spacing and alignment */
+.portfolio-block.skills .text-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portfolio-block.skills .text-center .btn {
+    min-width: 200px;
+    flex-shrink: 0;
+}
+
+/* Fix btn-outline-secondary visibility on white background */
+.portfolio-block.skills .btn-outline-secondary {
+    color: #495057 !important;
+    border: 2px solid #495057 !important;
+    background-color: transparent !important;
+    font-weight: 600 !important;
+}
+
+.portfolio-block.skills .btn-outline-secondary:hover,
+.portfolio-block.skills .btn-outline-secondary:focus {
+    background-color: #495057 !important;
+    color: #ffffff !important;
+    border-color: #495057 !important;
+}
+
+/* Fluid Typography for About Page */
+.portfolio-block.skills .col-lg-10,
+.portfolio-block.skills .col-xl-8 {
+    padding: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.portfolio-block.skills h2 {
+    font-size: clamp(1.75rem, 4vw, 2rem);
+    margin-bottom: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.portfolio-block.skills p,
+.portfolio-block.skills ul.list-unstyled li {
+    font-size: clamp(1rem, 2.5vw, 1.05rem);
+}
+
+.portfolio-block.skills .text-center {
+    gap: clamp(0.75rem, 2vw, 1rem);
+}
+
+.portfolio-block.skills .text-center .btn {
+    min-width: clamp(180px, 25vw, 200px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .portfolio-block.skills .text-center {
+        flex-direction: column;
+    }
+
+    .portfolio-block.skills .text-center .btn {
+        width: 100%;
+        min-width: auto;
+    }
+}
+

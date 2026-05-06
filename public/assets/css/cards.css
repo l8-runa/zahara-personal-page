@@ -1,0 +1,250 @@
+/* Uniform Card Styling for Home and Services Pages */
+
+/* Card Grid Spacing - Uniform 1rem spacing (horizontal and vertical) */
+.portfolio-block.skills .row.g-4 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+}
+
+.portfolio-block.skills .row.g-4 > [class*="col-"] {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Ensure all cards in a row have equal height */
+.portfolio-block.skills .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-block.skills .row > [class*="col-"] {
+    display: flex;
+}
+
+.portfolio-block.skills .row > [class*="col-"] > .card,
+.portfolio-block.skills .row > [class*="col-"] > .special-skill-item {
+    width: 100%;
+}
+
+/* Special Skill Item Cards - Uniform Styling (Smaller) */
+.special-skill-item {
+    text-align: center;
+    padding: 1.25rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    min-height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.special-skill-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    border-color: rgba(102, 126, 234, 0.2);
+}
+
+
+.special-skill-item .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.special-skill-item .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.625rem;
+    color: #333;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.special-skill-item .card-text {
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    flex-grow: 1;
+    margin-bottom: 0.5rem;
+}
+
+.special-skill-item .text-muted {
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+/* Standard Cards (Services Page - Market Opportunities & Service Tiers) */
+.portfolio-block.skills .card {
+    padding: 0;
+    margin-bottom: 0;
+    height: 100%;
+    min-height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-block.skills .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-block.skills .card .card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.portfolio-block.skills .card .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.portfolio-block.skills .card .card-text {
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+/* List Styling - Clean Bullet Lists */
+.portfolio-block.skills .list-unstyled {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+.portfolio-block.skills .list-unstyled li {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 0.875rem;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.6;
+    position: relative;
+}
+
+.portfolio-block.skills .list-unstyled li:last-child {
+    margin-bottom: 0;
+}
+
+.portfolio-block.skills .list-unstyled li::before,
+.portfolio-block.skills .list-unstyled li::marker {
+    display: none !important;
+    content: none !important;
+}
+
+.portfolio-block.skills .list-unstyled li i.fa-check {
+    flex-shrink: 0;
+    margin-right: 0.875rem;
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+    width: 1.1rem;
+    text-align: left;
+    color: #28a745;
+}
+
+.portfolio-block.skills .list-unstyled li span {
+    flex: 1;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Service Tier Cards */
+.portfolio-block.skills .card.border-primary,
+.portfolio-block.skills .card.border-warning,
+.portfolio-block.skills .card.border-info {
+    border-width: 2px !important;
+}
+
+.portfolio-block.skills .card .badge,
+.portfolio-block.skills .card .h4 {
+    margin-bottom: 0.75rem;
+}
+
+.portfolio-block.skills .card .list-unstyled.text-start {
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-block.skills .card .btn {
+    margin-top: auto;
+}
+
+/* Card Responsive with Fluid Typography */
+.special-skill-item {
+    padding: clamp(1rem, 3vw, 1.25rem);
+}
+
+.special-skill-item .card-title {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+}
+
+.special-skill-item .card-text {
+    font-size: clamp(0.85rem, 2vw, 0.9rem);
+}
+
+.portfolio-block.skills .card .card-body {
+    padding: clamp(1rem, 3vw, 1.25rem);
+}
+
+.portfolio-block.skills .card .card-title {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+}
+
+.portfolio-block.skills .card .card-text {
+    font-size: clamp(0.85rem, 2vw, 0.9rem);
+}
+
+.portfolio-block.skills .list-unstyled li span {
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+}
+
+/* Cost Comparison Sections - Plain text, no bullets */
+.card-body > div > div {
+    color: #495057 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+    list-style: none;
+}
+
+.card-body > div > div:last-child {
+    margin-bottom: 0;
+}
+
+/* Ensure card text is always dark, never white */
+.card-body,
+.card-body p,
+.card-body div,
+.card-body ul,
+.card-body li {
+    color: #212529 !important;
+}
+
+.card-body strong {
+    color: #212529 !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .portfolio-block.skills .row > [class*="col-"] {
+        margin-bottom: clamp(0.75rem, 2vw, 1rem);
+    }
+}
+

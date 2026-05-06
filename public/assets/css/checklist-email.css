@@ -1,0 +1,174 @@
+/* Checklist Email Capture Form Readability */
+
+/* Ensure card text is readable on gradient background */
+#emailCaptureSection .card {
+    background: #ffffff !important;
+    color: #212529 !important;
+    border: none !important;
+}
+
+#emailCaptureSection .card-body {
+    color: #212529 !important;
+    padding: 1.5rem !important;
+}
+
+#emailCaptureSection h3 {
+    color: #212529 !important;
+    font-weight: 600 !important;
+    font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+#emailCaptureSection p {
+    color: #495057 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+}
+
+#emailCaptureSection .text-muted {
+    color: #6c757d !important;
+    font-size: 1rem !important;
+}
+
+/* Form labels */
+#emailCaptureSection .form-label {
+    color: #212529 !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+#emailCaptureSection .form-label i {
+    color: #007bff !important;
+}
+
+/* Form inputs */
+#emailCaptureSection .form-control {
+    color: #212529 !important;
+    font-size: 1rem !important;
+    background-color: #ffffff !important;
+    border: 2px solid #dee2e6 !important;
+    padding: 0.75rem 1rem !important;
+    min-height: 44px !important;
+}
+
+#emailCaptureSection .form-control:focus {
+    color: #212529 !important;
+    background-color: #ffffff !important;
+    border-color: #007bff !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+}
+
+#emailCaptureSection .form-control::placeholder {
+    color: #6c757d !important;
+    opacity: 0.7 !important;
+}
+
+/* Invalid feedback */
+#emailCaptureSection .invalid-feedback {
+    color: #dc3545 !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+}
+
+#emailCaptureSection .form-control.is-invalid {
+    border-color: #dc3545 !important;
+}
+
+/* Button readability */
+#emailCaptureSection .btn-primary {
+    background-color: #007bff !important;
+    color: #ffffff !important;
+    border-color: #007bff !important;
+    font-weight: 600 !important;
+    font-size: 1.125rem !important;
+}
+
+#emailCaptureSection .btn-primary:hover,
+#emailCaptureSection .btn-primary:focus {
+    background-color: #0056b3 !important;
+    border-color: #0056b3 !important;
+    color: #ffffff !important;
+}
+
+#emailCaptureSection .btn-success {
+    background-color: #198754 !important;
+    color: #ffffff !important;
+    border-color: #198754 !important;
+}
+
+/* Ensure contrast on gradient background section */
+#emailCaptureSection.portfolio-block.block-intro {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#emailCaptureSection.portfolio-block.block-intro .card {
+    background: #ffffff !important;
+}
+
+/* Checklist content section readability */
+#checklistContentSection h2 {
+    color: #212529 !important;
+    font-weight: 600 !important;
+}
+
+#checklistContentSection p {
+    color: #495057 !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+}
+
+#checklistContentSection .card-title {
+    color: #212529 !important;
+    font-weight: 600 !important;
+}
+
+#checklistContentSection .card-text {
+    color: #495057 !important;
+}
+
+/* CTA section readability (already has white text on gradient, but ensure it's readable) */
+.portfolio-block.website h3 {
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+    font-weight: 600 !important;
+}
+
+.portfolio-block.website p,
+.portfolio-block.website .lead {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+    font-size: clamp(1rem, 2.5vw, 1.125rem) !important;
+    line-height: 1.7 !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    #emailCaptureSection .card-body {
+        padding: 1.5rem !important;
+    }
+
+    #emailCaptureSection h3 {
+        font-size: 1.5rem !important;
+    }
+
+    #emailCaptureSection p {
+        font-size: 0.95rem !important;
+    }
+
+    #emailCaptureSection .form-control {
+        font-size: 0.95rem !important;
+    }
+
+    .portfolio-block.website h3 {
+        font-size: clamp(1.5rem, 5vw, 2rem) !important;
+    }
+
+    .portfolio-block.website p,
+    .portfolio-block.website .lead {
+        font-size: 1rem !important;
+    }
+}
+

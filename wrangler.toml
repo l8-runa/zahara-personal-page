@@ -1,0 +1,8 @@
+name = "zahara-personal-page"
+main = "src/index.js"
+account_id = "e7a737dd013468f9078050ae69ac423d"
+
+compatibility_date = "2026-05-06"
+
+[assets]
+directory = "./public"

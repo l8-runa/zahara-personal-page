@@ -1,0 +1,433 @@
+/* LGBTQ+ Pride Theme */
+
+/* Color palette */
+:root {
+  /* Trans flag colors (5 stripes: Blue, Pink, White, Pink, Blue) */
+  --trans-blue: #5BCEFA;
+  --trans-pink: #F5A9B8;
+  --trans-white: #FFFFFF;
+  
+  /* Lesbian flag colors (7 stripes: dark orange, orange, light orange, white, pink, dusty pink, dark rose) */
+  --lesbian-dark-orange: #D52D00;
+  --lesbian-orange: #FF9A56;
+  --lesbian-light-orange: #FFB3BA;
+  --lesbian-white: #FFFFFF;
+  --lesbian-pink: #FFB3D9;
+  --lesbian-dusty-pink: #D362A4;
+  --lesbian-dark-rose: #A30262;
+  
+  /* Rainbow colors for accents */
+  --rainbow-red: #E40303;
+  --rainbow-orange: #FF8C00;
+  --rainbow-yellow: #FFED00;
+  --rainbow-green: #008026;
+  --rainbow-blue: #004DFF;
+  --rainbow-purple: #750787;
+  --rainbow-pink: #FF69B4;
+  
+  /* Gradient definitions */
+  --rainbow-flag: linear-gradient(
+    90deg,
+    var(--rainbow-red) 0%,
+    var(--rainbow-orange) 16.66%,
+    var(--rainbow-yellow) 33.33%,
+    var(--rainbow-green) 50%,
+    var(--rainbow-blue) 66.66%,
+    var(--rainbow-purple) 83.33%,
+    var(--rainbow-pink) 100%
+  );
+  
+  --trans-flag: linear-gradient(
+    90deg,
+    var(--trans-blue) 0%,
+    var(--trans-blue) 20%,
+    var(--trans-pink) 20%,
+    var(--trans-pink) 40%,
+    var(--trans-white) 40%,
+    var(--trans-white) 60%,
+    var(--trans-pink) 60%,
+    var(--trans-pink) 80%,
+    var(--trans-blue) 80%,
+    var(--trans-blue) 100%
+  );
+  
+  --trans-flag-135deg: linear-gradient(
+    135deg,
+    var(--trans-blue) 0%,
+    var(--trans-blue) 20%,
+    var(--trans-pink) 20%,
+    var(--trans-pink) 40%,
+    var(--trans-white) 40%,
+    var(--trans-white) 60%,
+    var(--trans-pink) 60%,
+    var(--trans-pink) 80%,
+    var(--trans-blue) 80%,
+    var(--trans-blue) 100%
+  );
+  
+  --lesbian-flag: linear-gradient(
+    90deg,
+    var(--lesbian-dark-orange) 0%,
+    var(--lesbian-dark-orange) 14.28%,
+    var(--lesbian-orange) 14.28%,
+    var(--lesbian-orange) 28.56%,
+    var(--lesbian-light-orange) 28.56%,
+    var(--lesbian-light-orange) 42.84%,
+    var(--lesbian-white) 42.84%,
+    var(--lesbian-white) 57.14%,
+    var(--lesbian-pink) 57.14%,
+    var(--lesbian-pink) 71.42%,
+    var(--lesbian-dusty-pink) 71.42%,
+    var(--lesbian-dusty-pink) 85.7%,
+    var(--lesbian-dark-rose) 85.7%,
+    var(--lesbian-dark-rose) 100%
+  );
+  
+  /* Component-specific background variables for easy management */
+  --navbar-background: var(--trans-flag);
+  --footer-background: var(--lesbian-flag);
+}
+
+/* Navbar - Trans flag colors (Blue, Pink, White, Pink, Blue) */
+.lgbt-theme .navbar {
+  background: var(--navbar-background) !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Navbar text - ensure high contrast for readability */
+.lgbt-theme .navbar-brand,
+.lgbt-theme .navbar-nav .nav-link {
+  color: #1a1a1a !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9) !important;
+  font-weight: 600 !important;
+}
+
+.lgbt-theme .navbar-brand:hover,
+.lgbt-theme .navbar-nav .nav-link:hover,
+.lgbt-theme .navbar-nav .nav-link.active {
+  color: #000000 !important;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 1) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Navbar avatar border - trans colors */
+.lgbt-theme .navbar-avatar {
+  border: 2px solid var(--trans-blue) !important;
+  box-shadow: 0 0 8px rgba(91, 206, 250, 0.5) !important;
+}
+
+.lgbt-theme .navbar-brand:hover .navbar-avatar {
+  border-color: var(--trans-pink) !important;
+  box-shadow: 0 0 12px rgba(245, 169, 184, 0.6) !important;
+}
+
+/* Body text - ensure readability */
+.lgbt-theme body {
+  color: #1a1a1a !important;
+  background-color: #ffffff !important;
+}
+
+.lgbt-theme p,
+.lgbt-theme li,
+.lgbt-theme span:not(.lgbt-easter-egg) {
+  color: #1a1a1a !important;
+}
+
+
+/* Links - use lesbian colors with good contrast */
+.lgbt-theme a:not(.navbar-brand):not(.nav-link):not(.btn):not(.lgbt-easter-egg) {
+  color: var(--lesbian-dark-rose) !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(163, 2, 98, 0.3) !important;
+}
+
+.lgbt-theme a:not(.navbar-brand):not(.nav-link):not(.btn):not(.lgbt-easter-egg):hover {
+  color: var(--lesbian-orange) !important;
+  text-decoration-color: var(--lesbian-orange) !important;
+}
+
+/* Cards - subtle border with trans colors */
+.lgbt-theme .card {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    var(--trans-flag) border-box;
+  border-radius: 0.5rem;
+  background-color: #ffffff !important;
+}
+
+.lgbt-theme .card-header {
+  background: var(--trans-flag) !important;
+  color: #1a1a1a !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9) !important;
+  font-weight: 600 !important;
+}
+
+/* Form inputs - subtle focus with trans colors */
+.lgbt-theme .form-control {
+  border-color: #ced4da !important;
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+}
+
+.lgbt-theme .form-control:focus {
+  border-color: var(--trans-blue) !important;
+  box-shadow: 0 0 0 0.2rem rgba(91, 206, 250, 0.25) !important;
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+}
+
+/* Hero section - trans colors */
+.lgbt-theme .hero {
+  background: var(--trans-flag-135deg) !important;
+  color: #1a1a1a !important;
+}
+
+.lgbt-theme .hero h1,
+.lgbt-theme .hero p {
+  color: #1a1a1a !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Thick lesbian flag banner above footer */
+.lgbt-theme .footer-flag-banner {
+  width: 100%;
+  height: 16px;
+  background: var(--lesbian-flag) !important;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer - readable background with good contrast */
+.lgbt-theme .page-footer,
+.lgbt-theme .footer {
+  background: #f8f9fa !important;
+  color: #212529 !important;
+  border-top: 1px solid #dee2e6 !important;
+}
+
+.lgbt-theme .page-footer .text-body-secondary {
+  color: #6c757d !important;
+}
+
+.lgbt-theme .page-footer a,
+.lgbt-theme .footer a {
+  color: #495057 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.lgbt-theme .page-footer a:hover,
+.lgbt-theme .footer a:hover {
+  color: var(--lesbian-dark-rose) !important;
+}
+
+.lgbt-theme .footer-nav-link {
+  color: #6c757d !important;
+  transition: color 0.2s ease !important;
+}
+
+.lgbt-theme .footer-nav-link:hover {
+  color: var(--lesbian-dark-rose) !important;
+}
+
+.lgbt-theme .footer-nav-link.active {
+  color: var(--lesbian-dark-rose) !important;
+}
+
+.lgbt-theme .footer-badge-link {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.lgbt-theme .footer-badge-link:hover .footer-badge {
+  transform: scale(1.1) !important;
+  opacity: 1 !important;
+}
+
+.lgbt-theme .footer-badge-link.always-enabled {
+  opacity: 0.95 !important;
+  cursor: default !important;
+}
+
+.lgbt-theme .footer-badge-link.always-enabled:hover .footer-badge {
+  transform: scale(1.05) !important;
+}
+
+/* Section backgrounds - very subtle tint */
+.lgbt-theme .section-alt {
+  background: linear-gradient(
+    180deg,
+    rgba(91, 206, 250, 0.03) 0%,
+    rgba(245, 169, 184, 0.03) 50%,
+    rgba(163, 2, 98, 0.03) 100%
+  ) !important;
+}
+
+/* Headings - full width accent lines with trans flag colors */
+.lgbt-theme h1,
+.lgbt-theme h2,
+.lgbt-theme h3,
+.lgbt-theme h4,
+.lgbt-theme h5,
+.lgbt-theme h6 {
+  color: #1a1a1a !important;
+  position: relative !important;
+}
+
+/* All hr elements - Rainbow colors */
+.lgbt-theme hr {
+  border: none !important;
+  height: 4px !important;
+  background: var(--rainbow-flag) !important;
+  margin: 1.5rem 0 !important;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Full width accent line below headings - Rainbow colors (hide if hr follows immediately) */
+.lgbt-theme h1::after,
+.lgbt-theme h2::after,
+.lgbt-theme h3::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--rainbow-flag);
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Fix section-heading with flexbox - ensure ::after appears below flex content */
+.lgbt-theme .section-heading {
+  flex-wrap: wrap !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.lgbt-theme .section-heading::after {
+  content: '' !important;
+  display: block !important;
+  flex-basis: 100% !important;
+  width: 100% !important;
+  order: 999 !important;
+  height: 4px !important;
+  background: var(--rainbow-flag) !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
+  border-radius: 2px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Better approach: hide ::after when hr is next sibling */
+.lgbt-theme h1:has(+ hr)::after,
+.lgbt-theme h2:has(+ hr)::after,
+.lgbt-theme h3:has(+ hr)::after {
+  display: none !important;
+}
+
+/* Fix h3 elements in words sections - ensure proper spacing with rainbow line */
+.lgbt-theme .words-section h3::after {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Easter egg link styling - subtle and inline */
+.lgbt-easter-egg {
+  color: inherit !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(163, 2, 98, 0.4) !important;
+  text-underline-offset: 2px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  display: inline !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  font-weight: inherit !important;
+}
+
+.lgbt-easter-egg:hover {
+  text-decoration-color: var(--lesbian-dark-rose) !important;
+  color: var(--lesbian-dark-rose) !important;
+}
+
+/* When theme is active, show trans/lesbian gradient */
+.lgbt-theme .lgbt-easter-egg {
+  background: linear-gradient(
+    90deg,
+    var(--trans-blue),
+    var(--trans-pink),
+    var(--lesbian-pink),
+    var(--lesbian-dusty-pink),
+    var(--lesbian-dark-rose)
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-decoration-color: var(--lesbian-dark-rose) !important;
+}
+
+.lgbt-theme .lgbt-easter-egg:hover {
+  filter: brightness(1.1) !important;
+}
+
+/* Disabled state for gay domain or Pride Month */
+.lgbt-easter-egg.always-enabled,
+.lgbt-easter-egg:disabled {
+  opacity: 0.8 !important;
+  cursor: default !important;
+}
+
+.lgbt-easter-egg.always-enabled:hover,
+.lgbt-easter-egg:disabled:hover {
+  text-decoration-color: rgba(163, 2, 98, 0.4) !important;
+}
+
+/* Navbar toggler for mobile */
+.lgbt-theme .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.2) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+.lgbt-theme .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2826, 26, 26, 0.95%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Smooth transitions */
+.lgbt-theme * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Ensure all text remains readable */
+.lgbt-theme .text-muted {
+  color: #6c757d !important;
+}
+
+.lgbt-theme code,
+.lgbt-theme pre {
+  background-color: #f8f9fa !important;
+  color: #1a1a1a !important;
+  border: 1px solid #dee2e6 !important;
+}
+
+/* Table styling */
+.lgbt-theme table {
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+}
+
+.lgbt-theme table th {
+  background-color: rgba(91, 206, 250, 0.1) !important;
+  color: #1a1a1a !important;
+  border-color: rgba(211, 98, 164, 0.2) !important;
+}
+
+.lgbt-theme table td {
+  border-color: rgba(211, 98, 164, 0.1) !important;
+  color: #1a1a1a !important;
+}
